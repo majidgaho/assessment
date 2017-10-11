@@ -2,7 +2,7 @@
 
 Please clone/download the Project 
 
-Using command prompt navigate to the webapp directory of the Project and rum "npm install" and then do "tsc".
+Using command prompt navigate to the webapp directory of the Project and rum "npm install".
 
 To run the application 
 
@@ -18,7 +18,7 @@ Spring Boot Project created using Spring Initializer with the depandancies "H2 D
 
 Frontend
 --------
-Angular 2
+Angular 2 and Bootstrap.
 
 DB
 ---
