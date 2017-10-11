@@ -1,0 +1,51 @@
+
+
+<div class="container">
+	<fieldset>
+		<legend>
+			Tasks
+		</legend>
+  <table class="table" *ngIf="todosLength > 0">
+    <thead>
+      <tr >
+        <th>Task</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of todos">
+        <td>{{item.taskName}}</td>
+        <td>{{item.completed == false ? 'Pending' : 'Completed'}}</td>
+        <td><span style="cursor: pointer;" class="glyphicon glyphicon-ok" title="Mart As Completed" (click)="saveTodo('',item)" *ngIf="!item.completed" ></span>
+	  <span style="cursor: pointer;"  class="glyphicon glyphicon-exclamation-sign" title="Mart As Pending" (click)="saveTodo('',item)" *ngIf="item.completed" ></span>
+		<span style="cursor: pointer;"  class="glyphicon glyphicon-remove" title="Remove" (click)="remove(item)" ></span></td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>
+</div>
+<div class="container">
+	<fieldset>
+		<legend>
+			Add New Task
+		</legend>
+<form [formGroup]="form " >
+		<div class="section ">
+				<div class="row ">
+					<div class="col-lg-4 col-md-6 col-sm-6 ">
+						<div class="row ">
+							<label class="col-md-4 ">Task Name </label>
+							<div class="col-md-8 ">
+								<input type="text " class="form-control " [(ngModel)]="task.taskName" 
+								[formControl]="form.controls['taskName']">
+							</div>
+						</div>
+					</div>
+					<button type="button" (click)="saveTodo('save')"  class="btn btn-sm btn-primary" >Save</button>	
+				</div>
+				
+			</div>
+</form>
+	</fieldset>	
+</div>
