@@ -6,7 +6,7 @@ Using command prompt navigate to the webapp directory of the Project and rum "np
 
 To run the application 
 
-run AssessmentApplication.java file.
+run AssessmentApplication.java file from assessment/src/main/java/com/todos/assessment/
 
 
 Project Description
